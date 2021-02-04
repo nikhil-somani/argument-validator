@@ -1,14 +1,17 @@
 import itertools
 
+#function to return a->b output 
 def implies (a, b):
     return (not a) or b
 
+#function to return and output for any number of arguments
 def and_func(*args):
     output = True
     for n in args:
         output = output and n
     return output
 
+#function to return or output for any number of arguments
 def or_func(*res):
     result = False
     for i in res:
@@ -21,6 +24,8 @@ def or_func(*res):
 # print("p->q ^ r ->s")
 # print (" P Q R P->Q R->S PREMISE 1")
 
+
+#itertool product for cartesian product
 for (P,Q,R,S,T) in itertools.product([True,False],repeat=5):
     print ("{:2d}".format(P),end="")
     print ("{:2d}".format(Q),end="")
